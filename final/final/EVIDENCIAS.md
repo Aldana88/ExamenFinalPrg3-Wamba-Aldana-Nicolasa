@@ -1,25 +1,71 @@
-# 📋 Evidencias de Pruebas - BiblioExpress
+# Evidencias - Examen Final
 
-Este documento recopila las capturas de pantalla que demuestran el correcto funcionamiento de los endpoints de la API en Postman, cumpliendo con los entregables del examen final.
+## 1. POST - Crear material
 
----
+Se creó correctamente un nuevo material mediante el endpoint **POST**. La API respondió con un código de estado **201 Created** (o **200 OK**, según la implementación), confirmando el alta del registro.
 
-## 1. Registro Exitoso de Préstamo
-
-* **Endpoint:** `POST /api/prestamos/prestar`
-* **Descripción:** Envío de una solicitud JSON con el código del material y el ID del socio para procesar un préstamo de manera exitosa.
-
-### Captura de Prueba en Postman:
-<img width="1009" height="513" alt="image" src="https://github.com/user-attachments/assets/cb7b034a-8736-4ac6-b404-cc62d426f022" />
-
-
-* **Resultado obtenido:** Respuesta `200 OK` (o validación correspondiente del sistema) confirmando la operación del backend en el puerto `8080`.
+![POST Crear Material](capturas/01-post-material.png)
 
 ---
 
-## 2. Configuración y Ejecución del Servidor
+## 2. GET - Listar materiales
 
-* **Descripción:** Verificación del arranque correcto de Spring Boot mediante Tomcat en la consola de desarrollo.
+Se obtuvo correctamente el listado de todos los materiales registrados mediante el endpoint **GET**. La API respondió con **200 OK**.
 
-### Captura de la Terminal:
-![Servidor Activo](./capturas/image_6752e4.png)
+![GET Materiales](capturas/02-get-materiales.png)
+
+---
+
+## 3. GET - Buscar material por ID
+
+Se consultó correctamente un material específico utilizando su identificador. La respuesta fue **200 OK** con la información correspondiente.
+
+![GET Material por ID](capturas/03-get-material-id.png)
+
+---
+
+## 4. PUT - Actualizar material
+
+Se actualizó correctamente la información de un material mediante el endpoint **PUT**. La API confirmó la modificación realizada.
+
+![PUT Material](capturas/04-put-material.png)
+
+---
+
+## 5. DELETE - Eliminar material
+
+Se eliminó correctamente un material del sistema mediante el endpoint **DELETE**. La API respondió indicando que la operación se realizó exitosamente.
+
+![DELETE Material](capturas/05-delete-material.png)
+
+---
+
+## 6. POST - Registrar préstamo
+
+Se registró correctamente un préstamo de un material a un usuario. La API respondió con éxito, almacenando la información del préstamo.
+
+![POST Préstamo](capturas/06-post-prestamo.png)
+
+---
+
+## 7. POST - Devolver préstamo
+
+Se registró correctamente la devolución del material prestado mediante el endpoint correspondiente. La API actualizó el estado del préstamo y confirmó la operación con una respuesta exitosa.
+
+![POST Devolver Préstamo](capturas/07-post-devolver.png)
+
+---
+
+## 8. GET - Materiales disponibles
+
+Se consultó correctamente el listado de materiales disponibles. La API respondió con **200 OK**, devolviendo únicamente los materiales que se encuentran disponibles para préstamo.
+
+![GET Materiales Disponibles](capturas/08-materiales-disponibles.png)
+
+---
+
+## 9. POST - Depurar duplicados
+
+Se ejecutó correctamente el proceso de depuración de materiales duplicados. La API eliminó los registros repetidos y devolvió la colección sin elementos duplicados.
+
+![POST Depurar Duplicados](capturas/09-depurar-duplicados.png)
